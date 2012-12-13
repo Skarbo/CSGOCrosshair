@@ -1,0 +1,678 @@
+@CHARSET "UTF-8";
+
+body {
+}
+
+body, td {
+    color: #333333;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 90%;
+}
+
+a {
+    color: inherit;
+}
+
+#wrapper {
+    margin: 0 auto;
+    /*width: 1200px;*/
+    padding: 10px;
+}
+
+h1 {
+    font-size: 0.8em;
+    font-weight: bold;
+    margin: 0;
+    padding: 0.4em 1.4em;
+}
+
+/* Wrapper table */
+
+#wrapper_table {
+    display: table;
+    width: 100%;
+}
+
+#wrapper_table > * {
+    display: table-cell;
+    vertical-align: top;
+    text-align: center;
+}
+
+#wrapper_table > *:first-child {
+    padding-right: 1em;
+}
+
+#wrapper_table > *+ * {
+    width: 520px;
+}
+
+#wrapper_table > * > * {
+    text-align: left;
+}
+
+/* /Wrapper table */
+
+/* Container */
+
+#container_wrapper {
+    background-color: #EFEFEF;
+    border-top: 2px solid #999999;
+    padding: 1em;
+}
+
+#container {
+    background-color: white;
+    cursor: none;
+    display: inline-block;
+    height: 480px;
+    min-width: 450px;
+    vertical-align: top;
+    width: 100%;
+}
+
+/* /Container */
+
+/* Backgrounds */
+
+#backgrounds {
+    padding: 5px;
+    text-align: center;
+}
+
+#backgrounds > * {
+    display: inline-block;
+    height: 50px;
+    width: 80px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    margin: 0 4px;
+    cursor: pointer;
+}
+
+#backgrounds img {
+    height: 50px;
+    border-radius: 4px;
+}
+
+/* /Backgrounds */
+
+#controls {
+
+}
+
+#controls img {
+    width: 15px;
+    height: 15px;
+}
+
+#controls #crosshair_usealpha_wrapper .ui-button .ui-button-text:AFTER {
+    content: "Disabled";
+}
+
+#controls #crosshair_usealpha_wrapper .ui-button[aria-pressed=true] .ui-button-text:AFTER {
+    content: "Enabled";
+}
+
+#controls .spinner {
+    width: 38px;
+}
+
+#controls table {
+    /*width: 300px;*/
+    /*width: 100%;*/
+    margin: auto;
+}
+
+#controls table td {
+    padding: 0.2em;
+    width: 1px;
+}
+
+#controls table td.fillwidth {
+
+}
+
+#controls table tr td:FIRST-CHILD {
+    vertical-align: top;
+    font-size: 90%;
+    font-weight: bold;
+    padding-top: 0.7em;
+}
+
+#controls .slider {
+    width: 200px;
+}
+
+#controls #crosshair_usealpha_wrapper label {
+    font-size: 80%;
+}
+
+#controls #crosshair_config {
+    width: 100%;
+    height: 150px;
+    border: 1px solid #AAA;
+}
+
+#controls #crosshair_config_console {
+    width: 100%;
+    border: 1px solid #AAA;
+    font-size: 0.8em;
+}
+
+#controls #crosshair_color {
+    width: 100px;
+    /*border-radius: 4px;
+     background-color: black;
+     border: 1px solid gray;*/
+}
+
+#controls #crosshair_color .sp-preview {
+    width: 60px;
+    height: 60px;
+}
+
+#controls #crosshair_color .sp-replacer {
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+}
+
+#controls #crosshair_color_r_slider .ui-slider-range {
+    background: #ef2929;
+}
+
+#controls #crosshair_color_r_slider .ui-slider-handle {
+    border-color: #ef2929;
+}
+
+#controls #crosshair_color_g_slider .ui-slider-range {
+    background: #8ae234;
+}
+
+#controls #crosshair_color_g_slider .ui-slider-handle {
+    border-color: #8ae234;
+}
+
+#controls #crosshair_color_b_slider .ui-slider-range {
+    background: #729fcf;
+}
+
+#controls #crosshair_color_b_slider .ui-slider-handle {
+    border-color: #729fcf;
+}
+
+#controls #crosshair_color_type {
+    font-size: 0.8em;
+}
+
+#controls #crosshair_color_type label {
+    vertical-align: top;
+}
+
+#controls #crosshair_color_type label.img[for] span {
+    /*background: url("../img/crosshair_color_1.png") no-repeat scroll 50% 50% transparent;
+     height: 15px;
+     width: 15px;*/
+
+}
+
+#controls #crosshair_color_type label.img[for="crosshair_color_1"] span {
+
+}
+
+#controls #crosshair_color_type label.img[for="crosshair_color_2"] span {/*background-image: url("../img/crosshair_color_2.png");*/
+
+}
+
+#controls #crosshair_color_type label.img[for="crosshair_color_3"] span {/*background-image: url("../img/crosshair_color_3.png");*/
+
+}
+
+#controls #crosshair_color_type label.img[for="crosshair_color_4"] span {/*background-image: url("../img/crosshair_color_4.png");*/
+
+}
+
+#controls #crosshair_color_type label[for="crosshair_color_5"] span {
+    /*color: #666;*/
+
+}
+
+#controls #crosshair_dot_wrapper .ui-button .ui-button-text {
+    background: url("../img/crosshair_dot_0.png") no-repeat scroll 50% 50% transparent;
+    height: 15px;
+    width: 15px;
+}
+
+#controls #crosshair_dot_wrapper .ui-button[aria-pressed=true] .ui-button-text {
+    background-image: url("../img/crosshair_dot_1.png");
+}
+
+.ui-menu {
+    position: absolute;
+    width: 120px;
+    white-space: nowrap;
+}
+
+#crosshair_style {
+    font-size: 0.7em;
+}
+
+#crosshair_style_type {
+    display: inline;
+}
+
+.tip {
+    color: #666;
+    font-size: 0.8em;
+}
+
+/* Footer */
+.footer {
+    background-color: #EFEFEF;
+    color: #666666;
+    font-size: 0.6em;
+    margin-top: 10px;
+    padding: 2px;
+    text-align: center;
+    vertical-align: middle;
+    border-top: 1px solid #999;
+}
+
+.footer img {
+    vertical-align: middle;
+}
+
+.footer h1 {
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+    display: inline;
+}
+
+/* /Footer */
+
+table.title tr td {
+    white-space: nowrap;
+}
+
+table.title tr td:FIRST-CHILD {
+    font-weight: bold;
+}
+
+table.title tr td+ td {
+    font-style: italic;
+}
+
+table.title tr td+ td+ td {
+    font-style: normal;
+}
+
+.info {
+    font-size: 0.8em;
+    margin-top: 0.5em;
+    font-weight: normal;
+    color: #666;
+}
+
+.info img {
+    vertical-align: middle;
+    height: 10px !important;
+    width: 10px !important;
+    margin-right: 2px;
+}
+
+span[title] {
+    border-bottom: 1px dotted #999;
+}
+
+.table {
+    display: table;
+    width: 100%;
+}
+
+.table > * {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.hide {
+    display: none !important;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+#updatehashfield {
+    background-color: black;
+    height: 50px;
+    position: fixed;
+    width: 100%;
+}
+
+/* Tabs */
+.tabs_wrapper {
+    /*width: 100%;*/
+    /*width: 300px;*/
+}
+
+.tabs {
+    display: table;
+    width: 100%;
+    vertical-align: top;
+    border-bottom: 2px solid #999999;
+}
+
+.tabs > * {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.tabs > *:FIRST-CHILD {
+    padding-left: 1em;
+}
+
+.tabs > *:LAST-CHILD {
+    padding-right: 1em;
+}
+
+.tabs > * > * {
+    display: inline-block;
+    padding: 0.4em 1.4em;
+    font-weight: bold;
+    font-size: 0.8em;
+    cursor: pointer;
+    /*background-color: #EEE;*/
+}
+
+.tabs > * > *.selected {
+    color: white;
+    background-color: #666666;
+}
+
+.tabs > * > *:HOVER:NOT(.selected) {
+    background-color: #EFEFEF;
+}
+
+.tabs > * > *#tab_bind {
+    float: right;
+}
+
+.tab_content {
+    /*border-top: 1em;*/
+    background-color: #EFEFEF;
+}
+
+.tab_content > * {
+    display: none;
+    width: 100%;
+}
+
+.tab_content > * > * {
+    padding: 0.5em;
+}
+
+.tab_content > .selected {
+    display: inline-block;
+}
+
+/* /Tabs */
+
+/* Binds */
+
+#binds_tab table#binds_tab_table {
+    width: 100%;
+}
+
+#binds_tab table#binds_tab_table > tbody > tr > td {
+    padding: 0.2em;
+}
+
+#binds_tab table#binds_tab_table > tbody > tr > td:first-child {
+    font-size: 0.9em;
+    font-weight: bold;
+    padding-top: 0.4em;
+    vertical-align: top;
+}
+
+#binds_tab #binds_autoexes {
+    width: 100%;
+    height: 10em;
+    white-space: nowrap;
+}
+
+#binds_tab .bind_key_keyboard {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0.1em;
+    visibility: hidden;
+}
+
+#binds_tab tbody > tr.bind:HOVER .bind_key_keyboard {
+    visibility: visible;
+}
+
+#binds_tab .bind_key_keyboard img {
+    width: 19px;
+}
+
+#binds_tab input[name=bind_key] {
+    font-family: monospace;
+    text-align: center;
+    width: 6em;
+}
+
+#binds_tab input.error {
+    border-color: darkRed;
+}
+
+#bind_crosshairs {
+    margin-bottom: 1em;
+}
+
+#bind_crosshairs td {
+
+}
+
+#bind_crosshairs input {
+    border: 1px solid #CCCCCC;
+    border-radius: 2px 2px 2px 2px;
+    padding: 0.1em 0.2em;
+}
+
+#bind_crosshairs td.bind_key {
+
+}
+
+#bind_crosshairs .bind {
+    vertical-align: middle;
+}
+
+#bind_crosshairs .bind_crosshair_canvas {
+    border: 1px solid #CCC;
+    height: 19px;
+    width: 19px;
+    background-color: white;
+    visibility: hidden;
+}
+
+#bind_crosshairs tbody .bind_crosshair_canvas {
+    visibility: visible;
+}
+
+#bind_crosshairs .add_bind, #bind_crosshairs .remove_bind {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+/* ... Binds */
+
+#bind_binds {
+    margin-bottom: 1em;
+}
+
+#bind_binds input {
+    border: 1px solid #CCCCCC;
+    border-radius: 2px 2px 2px 2px;
+    padding: 0.1em 0.2em;
+}
+
+#bind_binds .bind_type {
+    border: 1px solid #CCCCCC;
+    border-radius: 2px 2px 2px 2px;
+    padding: 0.1em 0.2em;
+    display: inline-block;
+    background-color: white;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+#bind_binds .bind_type .bind_type_value {
+    vertical-align: middle;
+    width: 12em;
+    padding-right: 0.2em;
+    display: inline-block;
+}
+
+#bind_binds tbody .bind_type .bind_type_value {
+    font-weight: bold;
+}
+
+#bind_binds .bind_type_drop, #bind_binds .add_bind, #bind_binds .remove_bind {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+#bind_binds_type {
+    width: 12em;
+}
+
+/* ... /Binds */
+
+/*/Binds */
+
+/* Keyboard */
+
+#keyboard {
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    height: auto;
+    padding: 10px;
+    position: fixed;
+    z-index: 1000;
+    display: none;
+}
+
+#keyboard button {
+    font-size: 0.9em;
+    cursor: pointer;
+    background-color: #F5F5F5;
+    background-image: -moz-linear-gradient(center top , #F5F5F5, #F1F1F1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px 2px 2px 2px;
+    color: #444444;
+    max-height: 62px;
+    max-width: 500px;
+    min-height: 0;
+    min-width: 0;
+    padding: 1px;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    -moz-user-select: none;
+    display: inline-block;
+}
+
+#keyboard table {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+#keyboard tr.top_row {
+    margin: 0px;
+    padding: 0px;
+}
+
+#keyboard tr.top_row td {
+    margin: 0px;
+    padding: 0px;
+    border: 0px none;
+}
+
+#keyboard table.f_row {
+    font-size: 0.9em;
+}
+
+#keyboard table.f_row td {
+    margin: auto;
+    padding-left: 5px;
+    border: 0px none;
+}
+
+#keyboard table.f_row td:first-child {
+    padding-left: 0;
+}
+
+#keyboard table.f_row td .esc {
+    width: 40px;
+    height: 29px;
+}
+
+#keyboard tr.top_row .pause {
+    width: 52px;
+    height: 29px;
+    font-size: 0.8em;
+}
+
+#keyboard table.f_row td .f_key {
+    width: 32px;
+    height: 29px;
+}
+
+#keyboard td.keypads, #keyboard td.arrows {
+    margin: 0px;
+    padding: 0px;
+    border: 0px none;
+    vertical-align: bottom;
+    padding-left: 10px;
+}
+
+#keyboard button.picked {
+    color: #999;
+    background: none;
+}
+
+#keyboard button.selected {
+    color: #1C94C4;
+    font-weight: bold;
+    border: 1px solid #FBD850;
+}
+
+/* /Keyboard */
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+    #wrapper_table > * {
+        display: table-row;
+    }
+
+    .tabs > * > *#add_bind {
+        float: inherit;
+    }
+
+}
