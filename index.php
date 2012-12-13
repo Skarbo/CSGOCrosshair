@@ -528,9 +528,9 @@ $kineticjs = $localhost ? "javascript/kinetic-v4.1.2.min.js" : "http://kineticjs
                         added fixedgap support
                         <tr><td>0.6<td>Added binds feature (beta)
                         </table>">Version 0.6</span> - Feedback: <a
-                href="http://www.reddit.com/r/GlobalOffensive/comments/1473t5/ive_created_a_csgo_crosshair_generator/">Reddit</a>/<a
+                href="http://www.reddit.com/r/GlobalOffensive/comments/1473t5/ive_created_a_csgo_crosshair_generator/" target="_blank">Reddit</a>/<a
                 href="http://forums.steampowered.com/forums/showthread.php?p=33511649#post33511649"
-                target="_blank">Steam forum</a>
+                target="_blank">Steam forum</a>/<a href="https://github.com/Skarbo/CSGOCrosshair/issues" target="_blank">GitHub</a>
         </div>
 
     </div>
