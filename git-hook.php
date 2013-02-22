@@ -46,7 +46,7 @@ set_error_handler( "myErrorHandler" );
 try
 {
 
-    $payload = json_decode( $_REQUEST[ 'payload' ] );
+    $payload = json_decode( $_POST[ 'payload' ] );
 
 }
 catch ( Exception $e )
