@@ -63,11 +63,12 @@ catch ( Exception $e )
 if ( $payload->ref === 'refs/heads/master' )
 {
 
-    file_put_contents( 'logs/request.txt', "Executing git-puller.sh", FILE_APPEND );
+    file_put_contents( 'logs/request.txt', "Executing git-puller.sh\n", FILE_APPEND );
 
-    $output = shell_exec( "git-puller.sh" );
+    //$output = shell_exec( "git-puller.sh" );
+    $output = shell_exec( "git pull" );
 
-    file_put_contents( 'logs/request.txt', "Shell executed", FILE_APPEND );
+    file_put_contents( 'logs/request.txt', "Shell executed\n", FILE_APPEND );
 
     //log the request
     file_put_contents( 'logs/github.txt', $output, FILE_APPEND );
