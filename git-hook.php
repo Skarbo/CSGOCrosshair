@@ -43,6 +43,8 @@ function myErrorHandler( $errno, $errstr, $errfile, $errline )
 
 set_error_handler( "myErrorHandler" );
 
+file_put_contents( 'logs/request.txt', date("H:i:m d. M. y\n") . print_r($_POST, true) . "\n\n", FILE_APPEND );
+
 try
 {
 
