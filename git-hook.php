@@ -67,4 +67,9 @@ if ( $payload->ref === 'refs/heads/master' )
     file_put_contents( 'logs/github.txt', $output, FILE_APPEND );
 
 }
+else
+{
+    file_put_contents( 'logs/error.txt', "Nothing to do", FILE_APPEND );
+}
+
 ?>
