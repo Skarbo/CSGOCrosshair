@@ -335,7 +335,7 @@ $(function() {
 
 	canvas.stage.on("mousemove", function(event) {
 		if (!freeze) {
-			var position = canvas.stage.getUserPosition();
+			var position = canvas.stage.getUserPosition(); //canvas.stage.getPointerPosition();
 			if (canvas.backgrounds[background] && canvas.backgrounds[background].getVisible()) {
 				// Move background
 				canvas.backgrounds[background].setPosition((canvas.backgrounds[background].getWidth() - canvas.stage.getWidth()) * (position.x / canvas.stage.getWidth()) * -1,

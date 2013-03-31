@@ -5,8 +5,8 @@ $localhost = strpos( $_SERVER[ "HTTP_HOST" ], "localhost" ) !== false;
 $imgPath = $localhost ? "img/" : "https://s3.amazonaws.com/csgo-crosshair-generator/img/";
 $javascript = $localhost ? "javascript/" : "https://s3.amazonaws.com/csgo-crosshair-generator/javascript/";
 $css = $localhost ? "css/" : "https://s3.amazonaws.com/csgo-crosshair-generator/css/";
-$jquery = $localhost ? "javascript/jquery-1.8.3.min.js" : "https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js";
-$kineticjs = $localhost ? "javascript/kinetic-v4.1.2.min.js" : "http://kineticjs.com/download/v4.1.2/kinetic-v4.1.2.min.js";
+$jquery = $localhost ? "javascript/jquery-1.8.3.min.js" : "https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"; // "javascript/jquery-1.9.1.min.js" : "https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js";
+$kineticjs = $localhost ? "javascript/kinetic-v4.1.2.min.js" : "http://kineticjs.com/download/v4.1.2/kinetic-v4.1.2.min.js"; // "javascript/kinetic-v4.3.3.min.js" : "https://d3lp1msu2r81bx.cloudfront.net/kjs/js/lib/kinetic-v4.3.3.min.js"; // "javascript/kinetic-v4.4.0.min.js" : "https://d3lp1msu2r81bx.cloudfront.net/kjs/js/lib/kinetic-v4.4.0.min.js"; //
 ?>
 <!DOCTYPE HTML PUBLIC "-/W3C/DTD HTML 4.01 Transitional/EN\" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -40,7 +40,7 @@ $kineticjs = $localhost ? "javascript/kinetic-v4.1.2.min.js" : "http://kineticjs
     src="<?php echo $javascript; ?>jquery-ui-1.9.2.custom.min.js"></script>
 <script type="text/javascript"
     src="<?php echo $javascript; ?>spectrum.js"></script>
-<script type="text/javascript" src="javascript/javascript.min.js"></script>
+<script type="text/javascript" src="javascript/javascript.js"></script>
 <link rel="stylesheet"
     href="css/ui-lightness/jquery-ui-1.9.2.custom.min.css">
 <link rel="stylesheet" href="<?php echo $css; ?>spectrum.css">
@@ -495,6 +495,10 @@ $kineticjs = $localhost ? "javascript/kinetic-v4.1.2.min.js" : "http://kineticjs
                 </div>
             </div>
         </div>
+
+        <?php if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') !== false): ?>
+        <div style="font-size: 0.6em; color: darkred; background-color: antiquewhite; display: inline; position: relative;">Chrome is experiencing some problems with the canvas framework. Please use another browser until the problem is fixed.</div>
+        <?php endif;?>
 
         <div class="footer">
             <h1>CS:GO Crosshair Generator</h1>
