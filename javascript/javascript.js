@@ -304,6 +304,7 @@ var animate = {
 	timout : null
 };
 var crosshairTimeout = null;
+var crosshairDrawTimeout = null;
 var binds = {
 	crosshair : {},
 	toggle : null,
@@ -335,7 +336,8 @@ $(function() {
 
 	canvas.stage.on("mousemove", function(event) {
 		if (!freeze) {
-			var position = canvas.stage.getUserPosition(); //canvas.stage.getPointerPosition();
+			var position = canvas.stage.getPointerPosition();// canvas.stage.getUserPosition();
+																// //
 			if (canvas.backgrounds[background] && canvas.backgrounds[background].getVisible()) {
 				// Move background
 				canvas.backgrounds[background].setPosition((canvas.backgrounds[background].getWidth() - canvas.stage.getWidth()) * (position.x / canvas.stage.getWidth()) * -1,
@@ -1585,6 +1587,11 @@ function updateCrosshair(canvasCrosshair, crosshair, noAnimate) {
 			canvasCrosshair.def.lines.bottom.hide();
 			canvasCrosshair.def.lines.left.hide();
 			canvasCrosshair.def.lines.right.hide();
+		} else {
+			canvasCrosshair.def.lines.top.show();
+			canvasCrosshair.def.lines.bottom.show();
+			canvasCrosshair.def.lines.left.show();
+			canvasCrosshair.def.lines.right.show();
 		}
 
 	} else {
@@ -1592,7 +1599,9 @@ function updateCrosshair(canvasCrosshair, crosshair, noAnimate) {
 		canvasCrosshair.classic.group.show();
 	}
 
-	canvasCrosshair.def.group.getStage().draw();
+	// canvasCrosshair.def.group.getStage().draw();
+	// canvas.stage.getUserPosition(); //
+	canvas.stage.draw();
 }
 
 function updateControl() {
