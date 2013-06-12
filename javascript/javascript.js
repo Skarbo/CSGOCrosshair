@@ -361,7 +361,6 @@ $(function() {
 	});
 
 	canvas.stage.on("mousemove", function(event) {
-		console.log("Mousemoev");
 		if (!freeze) {
 			var position = canvas.stage.getPointerPosition();// canvas.stage.getUserPosition();
 			// //
@@ -386,7 +385,6 @@ $(function() {
 	});
 	
 	canvas.canvas.click(function() {
-		console.log("Click");
 		freeze = !freeze;
 	});
 
