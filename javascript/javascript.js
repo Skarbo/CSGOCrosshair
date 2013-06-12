@@ -361,6 +361,7 @@ $(function() {
 	});
 
 	canvas.stage.on("mousemove", function(event) {
+		console.log("Mousemoev");
 		if (!freeze) {
 			var position = canvas.stage.getPointerPosition();// canvas.stage.getUserPosition();
 			// //
@@ -374,14 +375,7 @@ $(function() {
 			animateCrosshair(true);
 		}
 	});
-	// canvas.stage.on("mouseout", function(event) {
-	// if (!freeze) {
-	// canvas.crosshair.group.setPosition(center.x, center.y);
-	// if (canvas.backgrounds[background])
-	// canvas.backgrounds[background].centerBackground();
-	// canvas.stage.draw();
-	// }
-	// });
+
 	canvas.canvas.mouseout(function() {
 		if (!freeze) {
 			canvas.crosshair.group.setPosition(center.x, center.y);
@@ -390,10 +384,9 @@ $(function() {
 			canvas.stage.draw();
 		}
 	});
-	// canvas.stage.on("click", function(event) {
-	// freeze = !freeze;
-	// });
+	
 	canvas.canvas.click(function() {
+		console.log("Click");
 		freeze = !freeze;
 	});
 
@@ -432,7 +425,7 @@ $(function() {
 	backgroundsElement.children().click(function(event) {
 		loadBackground($(this).attr("data-background"));
 	});
-
+	
 	// /BACKGROUNDS
 
 	// CROSSHAIR
@@ -1521,7 +1514,7 @@ function updateCrosshair(canvasCrosshair, crosshair, noAnimate) {
 	var color = rgbToHex(crosshair.color_r, crosshair.color_g, crosshair.color_b);
 	if (crosshair.color >= 1 && crosshair.color <= 4)
 		color = COLOR.classic[crosshair.color];
-console.log("UpdateCrosshair", crosshair, crosshair.outline, crosshair.outline_draw);
+
 	var length = calcLength(crosshair.size);
 	var thickness = calcThickness(crosshair.thickness);
 	var gap = calcGap(crosshair.gap, noAnimate);
