@@ -521,6 +521,10 @@ $kineticjs = $localhost ? "javascript/kinetic-v4.5.4.js" : "https://d3lp1msu2r81
             </div>
         </div>
 
+        <?php if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') !== false): ?>
+            <div style="font-size: 0.6em; color: darkred; background-color: antiquewhite; display: inline; position: relative;">Chrome is having some problems with canvas framework</div>
+        <?php endif; ?>
+
         <div class="footer">
             <h1>CS:GO Crosshair Generator</h1>
             - Skarbo 2012 - <a
