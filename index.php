@@ -6,7 +6,7 @@ $imgPath = $localhost ? "img/" : "https://s3.amazonaws.com/csgo-crosshair-genera
 $javascript = $localhost ? "javascript/" : "https://s3.amazonaws.com/csgo-crosshair-generator/javascript/";
 $css = $localhost ? "css/" : "https://s3.amazonaws.com/csgo-crosshair-generator/css/";
 $jquery = $localhost ? "javascript/jquery-1.8.3.min.js" : "https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"; // "javascript/jquery-1.9.1.min.js" : "https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js";
-$kineticjs = $localhost ? "javascript/kinetic-v4.4.3.min.js" : "https://d3lp1msu2r81bx.cloudfront.net/kjs/js/lib/kinetic-v4.4.3.min.js"; // "javascript/kinetic-v4.1.2.min.js" : "http://kineticjs.com/download/v4.1.2/kinetic-v4.1.2.min.js"; // "javascript/kinetic-v4.3.3.min.js" : "https://d3lp1msu2r81bx.cloudfront.net/kjs/js/lib/kinetic-v4.3.3.min.js"; // "javascript/kinetic-v4.4.0.min.js" : "https://d3lp1msu2r81bx.cloudfront.net/kjs/js/lib/kinetic-v4.4.0.min.js"; //
+$kineticjs = $localhost ? "javascript/kinetic-v4.5.4.js" : "https://d3lp1msu2r81bx.cloudfront.net/kjs/js/lib/kinetic-v4.4.3.min.js"; // "javascript/kinetic-v4.1.2.min.js" : "http://kineticjs.com/download/v4.1.2/kinetic-v4.1.2.min.js"; // "javascript/kinetic-v4.3.3.min.js" : "https://d3lp1msu2r81bx.cloudfront.net/kjs/js/lib/kinetic-v4.3.3.min.js"; // "javascript/kinetic-v4.4.0.min.js" : "https://d3lp1msu2r81bx.cloudfront.net/kjs/js/lib/kinetic-v4.4.0.min.js"; //
 ?>
 <!DOCTYPE HTML PUBLIC "-/W3C/DTD HTML 4.01 Transitional/EN\" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -218,6 +218,31 @@ $kineticjs = $localhost ? "javascript/kinetic-v4.4.3.min.js" : "https://d3lp1msu
                                         id="crosshair_gap_spinner" /></td>
                                     <td><img
                                         src="img/crosshair_gap_1.png" /></td>
+                                </tr>
+                                <tr>
+                                    <td><span
+                                        title="<table
+                                        class=title>
+                                            <tr>
+                                                <td>cl_crosshair_drawoutline</td><td>0/1</td><td>Enabled/disabled</td>
+                                            </tr>
+                                            <tr>
+                                                <td>cl_crosshair_outlinethickness</td><td>0-3</td><td>Thickness</td>
+                                            </tr>
+                                            </table>">Outline</span></td>
+                                    <td><img
+                                        src="img/crosshair_outline_0.png" /></td>
+                                    <td class="fillwidth"><div
+                                            id="crosshair_outline_slider"
+                                            class="slider"></div></td>
+                                    <td><input class="spinner"
+                                        id="crosshair_outline_spinner" /></td>
+                                    <td><img
+                                        src="img/crosshair_outline_1.png" /></td>
+                                    <td id="crosshair_outline_draw_wrapper"><input
+                                        type="checkbox"
+                                        id="crosshair_outline_draw" /><label
+                                        for="crosshair_outline_draw"></label></td>
                                 </tr>
                                 <tr>
                                     <td rowspan="4"><span
@@ -496,8 +521,6 @@ $kineticjs = $localhost ? "javascript/kinetic-v4.4.3.min.js" : "https://d3lp1msu
             </div>
         </div>
 
-        <div style="font-size: 0.6em; color: darkred; background-color: antiquewhite; display: inline; position: relative;">Application is experiencing some problems with the canvas framework, like parts of the crosshair not being displayed. Will try to fix in a later time.</div>
-
         <div class="footer">
             <h1>CS:GO Crosshair Generator</h1>
             - Skarbo 2012 - <a
@@ -529,7 +552,8 @@ $kineticjs = $localhost ? "javascript/kinetic-v4.4.3.min.js" : "https://d3lp1msu
                     <td>Updated default crosshair representation and
                         added fixedgap support
                         <tr><td>0.6<td>Added binds feature (beta)
-                        </table>">Version 0.6</span> - Feedback: <a
+                        <tr><td>0.7<td>Fixed crosshair bug<br />Added outline features
+                        </table>">Version 0.7</span> - Feedback: <a
                 href="http://www.reddit.com/r/GlobalOffensive/comments/1473t5/ive_created_a_csgo_crosshair_generator/" target="_blank">Reddit</a>/<a
                 href="http://forums.steampowered.com/forums/showthread.php?p=33511649#post33511649"
                 target="_blank">Steam forum</a>/<a href="https://github.com/Skarbo/CSGOCrosshair/issues" target="_blank">GitHub</a>

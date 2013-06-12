@@ -116,6 +116,14 @@ h1 {
     content: "Enabled";
 }
 
+#controls #crosshair_outline_draw_wrapper .ui-button .ui-button-text:AFTER {
+    content: "Disabled";
+}
+
+#controls #crosshair_outline_draw_wrapper .ui-button[aria-pressed=true] .ui-button-text:AFTER {
+    content: "Enabled";
+}
+
 #controls .spinner {
     width: 38px;
 }
@@ -147,6 +155,10 @@ h1 {
 }
 
 #controls #crosshair_usealpha_wrapper label {
+    font-size: 80%;
+}
+
+#controls #crosshair_outline_draw_wrapper label {
     font-size: 80%;
 }
 
