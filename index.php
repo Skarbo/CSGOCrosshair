@@ -1,12 +1,11 @@
 <?php
 // Please do not hold me accountable for the code. Its...pretty ugly.
 
-$localhost = strpos( $_SERVER[ "HTTP_HOST" ], "localhost" ) !== false;
-$imgPath = $localhost ? "img/" : "https://s3.amazonaws.com/csgo-crosshair-generator/img/";
-$javascript = $localhost ? "javascript/" : "https://s3.amazonaws.com/csgo-crosshair-generator/javascript/";
-$css = $localhost ? "css/" : "https://s3.amazonaws.com/csgo-crosshair-generator/css/";
-$jquery = $localhost ? "javascript/jquery-1.8.3.min.js" : "https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"; // "javascript/jquery-1.9.1.min.js" : "https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js";
-$kineticjs = $localhost ? "javascript/kinetic-v4.5.4.js" : "https://d3lp1msu2r81bx.cloudfront.net/kjs/js/lib/kinetic-v4.5.4.min.js"; // "javascript/kinetic-v4.1.2.min.js" : "http://kineticjs.com/download/v4.1.2/kinetic-v4.1.2.min.js"; // "javascript/kinetic-v4.3.3.min.js" : "https://d3lp1msu2r81bx.cloudfront.net/kjs/js/lib/kinetic-v4.3.3.min.js"; // "javascript/kinetic-v4.4.0.min.js" : "https://d3lp1msu2r81bx.cloudfront.net/kjs/js/lib/kinetic-v4.4.0.min.js"; //
+$imgPath = "img/";
+$javascript = "javascript/";
+$css = "css/";
+$jquery = "javascript/jquery-1.8.3.min.js";
+$kineticjs = "javascript/kinetic-v4.5.4.js";
 ?>
 <!DOCTYPE HTML PUBLIC "-/W3C/DTD HTML 4.01 Transitional/EN\" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
