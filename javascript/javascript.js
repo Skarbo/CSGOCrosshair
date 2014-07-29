@@ -79,8 +79,8 @@ var CONFIG = {
 	usealpha : "cl_crosshairusealpha",
 	thickness : "cl_crosshairthickness",
 	fgap : "cl_fixedcrosshairgap",
-	outline : "cl_crosshair_outline",
-	outline_draw : "cl_crosshair_outline_draw"
+	outline : "cl_crosshair_outlinethickness",
+	outline_draw : "cl_crosshair_drawoutline"
 };
 
 var TEMPLATE = {
