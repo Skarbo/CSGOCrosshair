@@ -15,7 +15,7 @@
 	"cl_crosshairthickness" ( def. "0.5" )    
  */
 
-var IMG_PATH = window.location.hostname == "localhost" ? "img/" : "https://s3.amazonaws.com/csgo-crosshair-generator/img/";
+var IMG_PATH =  "img/";
 var ALPHA_FACTOR = 255;
 var THICKNESS_FACTOR = 19;
 var LENGTH_FACTOR = 19;
